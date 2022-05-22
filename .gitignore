@@ -1,4 +1,9 @@
+# Dependencies
 node_modules
+
+# Builds
 dist
+
+# Coverage
 .nyc_output
 coverage
