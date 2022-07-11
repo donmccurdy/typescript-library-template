@@ -1,9 +1,6 @@
-require('source-map-support').install();
+import test from 'ava';
+import { myPackage } from 'my-package';
 
-import * as test from 'tape';
-import { implemented } from '../';
-
-test('test', (t) => {
-	t.equals(implemented, true, 'implement library');
-	t.end();
+test('my-package', (t) => {
+	t.is(myPackage(), true, 'package exists');
 });

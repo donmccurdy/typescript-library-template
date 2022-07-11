@@ -1,1 +1,1 @@
-export const implemented = false;
+export const myPackage = () => true;
