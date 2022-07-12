@@ -15,8 +15,8 @@
     "watch": "microbundle watch --format modern --define PACKAGE_VERSION=$npm_package_version",
     "watch:debug": "microbundle watch --no-compress --format modern --define PACKAGE_VERSION=$npm_package_version",
     "test": "ava test/*.ts",
-    "coverage": "nyc --reporter=lcov --reporter=text ava test/*.ts --tap",
-    "coverage:report": "nyc report --reporter=text-lcov > .nyc_output/coverage.lcov",
+    "coverage": "c8 --reporter=lcov --reporter=text ava test/*.ts --tap",
+    "coverage:report": "c8 report --reporter=text-lcov > coverage/coverage.lcov",
     "preversion": "yarn dist && yarn test",
     "version": "rimraf dist/* && yarn dist && git add -u",
     "postversion": "git push && git push --tags && npm publish && yarn coverage:report"
@@ -27,7 +27,6 @@
     "eslint": "8.19.0",
     "eslint-config-prettier": "8.5.0",
     "microbundle": "0.15.0",
-    "nyc": "15.1.0",
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.8.2",
@@ -47,5 +46,8 @@
     "nodeArguments": [
       "--loader=ts-node/esm"
     ]
+  },
+  "dependencies": {
+    "c8": "^7.11.3"
   }
 }

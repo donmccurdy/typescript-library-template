@@ -5,5 +5,4 @@ node_modules
 dist
 
 # Coverage
-.nyc_output
 coverage
