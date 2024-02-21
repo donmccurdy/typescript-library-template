@@ -15,7 +15,7 @@
   },
   "repository": "github:donmccurdy/my-package",
   "author": "Don McCurdy <dm@donmccurdy.com>",
-  "license": "MIT",
+  "license": "BlueOak-1.0.0",
   "scripts": {
     "dist": "microbundle --format cjs,esm,modern --no-compress --define PACKAGE_VERSION=$npm_package_version",
     "watch": "microbundle watch --format cjs,esm,modern --no-compress --define PACKAGE_VERSION=$npm_package_version",
@@ -42,7 +42,7 @@
     "dist/",
     "src/",
     "README.md",
-    "LICENSE",
+    "LICENSE.md",
     "package.json"
   ],
   "browserslist": [
