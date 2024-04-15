@@ -37,7 +37,7 @@
     "prettier": "3.2.5",
     "rimraf": "5.0.5",
     "tsx": "^4.7.0",
-    "typescript": "5.4.4",
+    "typescript": "5.4.5",
     "typescript-eslint": "^7.6.0"
   },
   "files": [
