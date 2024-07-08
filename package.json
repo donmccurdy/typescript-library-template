@@ -35,9 +35,9 @@
     "eslint-config-prettier": "9.1.0",
     "microbundle": "0.15.1",
     "prettier": "3.3.2",
-    "rimraf": "5.0.7",
+    "rimraf": "5.0.8",
     "tsx": "^4.7.0",
-    "typescript": "5.5.2",
+    "typescript": "5.5.3",
     "typescript-eslint": "^7.6.0"
   },
   "files": [
