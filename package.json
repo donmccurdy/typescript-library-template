@@ -23,22 +23,18 @@
     "coverage": "c8 --reporter=lcov --reporter=text ava --no-worker-threads 'test/*.ts' --tap",
     "coverage:report": "c8 report --reporter=text-lcov > coverage/coverage.lcov",
     "preversion": "yarn dist && yarn test",
-    "version": "rimraf dist/* && yarn dist && git add -u",
+    "clean": "rm -rf dist/* || true",
+    "version": "yarn clean && yarn dist && git add -u",
     "postversion": "git push && git push --tags && npm publish && yarn coverage:report",
-    "lint": "eslint \"{src,test}/**/*.ts\""
+    "lint": "biome check src test",
+		"lint:ci": "biome ci src test"
   },
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
+    "@biomejs/biome": "^1.9.4",
     "ava": "6.2.0",
     "c8": "^10.0.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
     "microbundle": "0.15.1",
-    "prettier": "3.4.2",
-    "rimraf": "6.0.1",
-    "tsx": "^4.7.0",
-    "typescript": "5.7.3",
-    "typescript-eslint": "^7.6.0"
+    "typescript": "5.7.3"
   },
   "files": [
     "dist/",
@@ -57,7 +53,7 @@
       "ts": "module"
     },
     "nodeArguments": [
-      "--import=tsx"
+      "--experimental-strip-types"
     ]
   },
   "packageManager": "yarn@4.5.3"
