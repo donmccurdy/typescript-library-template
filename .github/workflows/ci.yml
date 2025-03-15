@@ -1,45 +1,45 @@
 name: CI
 
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [22.x, 23.x]
+    strategy:
+      matrix:
+        node-version: [22.x, 23.x]
 
-        env:
-            CI: true
-            LINT: ${{ matrix.node-version == '22.x' && true || false }}
-            COVERAGE: ${{ matrix.node-version == '22.x' && true || false }}
+    env:
+      CI: true
+      LINT: ${{ matrix.node-version == '22.x' && true || false }}
+      COVERAGE: ${{ matrix.node-version == '22.x' && true || false }}
 
-        steps:
-            - uses: actions/checkout@v4
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-            - run: corepack enable
-            - run: yarn install --immutable
-            - run: yarn dist
-            - run: yarn test
-            - run: yarn lint:ci
-              if: ${{ env.LINT == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn build
+      - run: yarn test
+      - run: yarn lint:ci
+        if: ${{ env.LINT == 'true' }}
 
-            # Coverage.
-            - name: Run coverage
-              if: ${{ env.COVERAGE == 'true' }}
-              run: |
-                  yarn coverage
-                  yarn coverage:report
-            - name: Report coverage
-              if: ${{ env.COVERAGE == 'true' }}
-              uses: codecov/codecov-action@v5
-              with:
-                  files: coverage/coverage.lcov
+      # Coverage.
+      - name: Run coverage
+        if: ${{ env.COVERAGE == 'true' }}
+        run: |
+          yarn coverage
+          yarn coverage:report
+      - name: Report coverage
+        if: ${{ env.COVERAGE == 'true' }}
+        uses: codecov/codecov-action@v5
+        with:
+          files: coverage/coverage.lcov
