@@ -3,12 +3,15 @@
 		"paths": {
 			"my-package": ["./"]
 		},
-		"moduleResolution": "node",
-		"module": "es2020",
-		"lib": ["es2020"],
-		"target": "es2020",
+		"moduleResolution": "NodeNext",
+		"module": "NodeNext",
+		"lib": ["es2022"],
+		"target": "es2022",
 		"declaration": true,
+		"stripInternal": true,
 		"typeRoots": ["node_modules/@types"],
-		"strict": true
+		"strict": true,
+		"erasableSyntaxOnly": true,
+		"verbatimModuleSyntax": true
 	}
 }
