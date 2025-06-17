@@ -3,15 +3,19 @@
 		"paths": {
 			"my-package": ["./"]
 		},
+		"typeRoots": ["node_modules/@types"],
 		"moduleResolution": "NodeNext",
 		"module": "NodeNext",
 		"lib": ["es2022"],
 		"target": "es2022",
+		"isolatedModules": true,
+		"isolatedDeclarations": true,
+		"allowJs": false,
 		"declaration": true,
 		"stripInternal": true,
-		"typeRoots": ["node_modules/@types"],
 		"strict": true,
 		"erasableSyntaxOnly": true,
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		"useDefineForClassFields": true
 	}
 }
