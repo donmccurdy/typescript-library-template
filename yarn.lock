@@ -1669,7 +1669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/nft@npm:^0.29.2":
+"@vercel/nft@npm:^0.29.4":
   version: 0.29.4
   resolution: "@vercel/nft@npm:0.29.4"
   dependencies:
@@ -1877,11 +1877,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava@npm:6.3.0":
-  version: 6.3.0
-  resolution: "ava@npm:6.3.0"
+"ava@npm:6.4.0":
+  version: 6.4.0
+  resolution: "ava@npm:6.4.0"
   dependencies:
-    "@vercel/nft": "npm:^0.29.2"
+    "@vercel/nft": "npm:^0.29.4"
     acorn: "npm:^8.14.1"
     acorn-walk: "npm:^8.3.4"
     ansi-styles: "npm:^6.2.1"
@@ -1898,7 +1898,7 @@ __metadata:
     common-path-prefix: "npm:^3.0.0"
     concordance: "npm:^5.0.4"
     currently-unhandled: "npm:^0.4.1"
-    debug: "npm:^4.4.0"
+    debug: "npm:^4.4.1"
     emittery: "npm:^1.1.0"
     figures: "npm:^6.1.0"
     globby: "npm:^14.1.0"
@@ -1928,7 +1928,7 @@ __metadata:
       optional: true
   bin:
     ava: entrypoints/cli.mjs
-  checksum: 10c0/10abc34f2d323b74b27fa6cb3ba808603c898459b0807d506be22ced15c32e977c278de119612838718179511df91fed2bfa1767238255829cf0bafe4fd3b721
+  checksum: 10c0/d96a0bfa8758f0c0dcfc9437801e17702535f493a01fab401289ac538bb2b7633afb7b5363392499d9ebce98bc1f425767008a76c4edf2aa225f7e2195aaa54c
   languageName: node
   linkType: hard
 
@@ -2622,7 +2622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.4, debug@npm:^4.4.0":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.4, debug@npm:^4.4.1":
   version: 4.4.1
   resolution: "debug@npm:4.4.1"
   dependencies:
@@ -4567,7 +4567,7 @@ __metadata:
   resolution: "my-package@workspace:."
   dependencies:
     "@biomejs/biome": "npm:^1.9.4"
-    ava: "npm:6.3.0"
+    ava: "npm:6.4.0"
     c8: "npm:^10.0.0"
     microbundle: "npm:0.15.1"
     typescript: "npm:5.8.3"
