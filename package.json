@@ -31,10 +31,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "ava": "6.4.0",
+    "ava": "6.4.1",
     "c8": "^10.0.0",
     "microbundle": "0.15.1",
-    "typescript": "5.8.3"
+    "typescript": "5.9.3"
   },
   "files": [
     "dist/",
