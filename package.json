@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "tsdown --format esm --env.PACKAGE_VERSION=$npm_package_version",
-    "build:watch": "tsdown watch --format esm --env.PACKAGE_VERSION=$npm_package_version",
+    "build:watch": "tsdown --watch --format esm --env.PACKAGE_VERSION=$npm_package_version",
     "test": "ava --no-worker-threads 'test/*.ts'",
     "coverage": "c8 --reporter=lcov --reporter=text ava --no-worker-threads 'test/*.ts' --tap",
     "coverage:report": "c8 report --reporter=text-lcov > coverage/coverage.lcov",
