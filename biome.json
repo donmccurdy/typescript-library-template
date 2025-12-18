@@ -16,6 +16,12 @@
     }
   },
   "files": {
-    "ignore": ["coverage/**", "packages/*/dist/**", "**/build", "**/.svelte-kit"]
+    "includes": [
+      "**",
+      "!**/coverage/**",
+      "!**/packages/**/*/dist/**",
+      "!**/build",
+      "!**/.svelte-kit"
+    ]
   }
 }
