@@ -18,8 +18,8 @@
   "scripts": {
     "build": "tsdown --format esm --env.PACKAGE_VERSION=$npm_package_version",
     "build:watch": "tsdown --watch --format esm --env.PACKAGE_VERSION=$npm_package_version",
-    "test": "ava --no-worker-threads 'test/*.ts'",
-    "coverage": "c8 --reporter=lcov --reporter=text ava --no-worker-threads 'test/*.ts' --tap",
+    "test": "node --test 'test/*.ts'",
+    "coverage": "c8 --reporter=lcov --reporter=text node --test 'test/*.ts' --tap",
     "coverage:report": "c8 report --reporter=text-lcov > coverage/coverage.lcov",
     "clean": "rm -rf dist/* || true",
     "lint": "biome check src test",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.8",
-    "ava": "7.0.0",
+    "@types/node": "^26.2.0",
     "c8": "^11.0.0",
     "tsdown": "^0.21.4",
     "typescript": "5.9.3"
