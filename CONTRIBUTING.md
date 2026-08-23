@@ -29,26 +29,20 @@ sure how to fix an issue, contributing a failing unit test for the issue can be 
 
 ### Testing
 
-Unit tests use [Ava](https://github.com/avajs/ava).
+Unit tests use [`node:test`](https://nodejs.org/api/test.html).
 
 ```bash
 # run all tests
 yarn test
 
-# run all tests, watching for source file changes to re-run
-yarn test --watch
-
-# run one test
-yarn test src/path/to/file.test.ts
-
 # run one test, watching for source file changes to re-run
-yarn test src/path/to/file.test.ts --watch
+node --test --watch src/path/to/file.test.ts
 ```
 
-To use a debugger and step through tests using Chrome Developer Tools, see [_Debugging tests with Chrome DevTools_](https://github.com/avajs/ava/blob/main/docs/recipes/debugging-with-chrome-devtools.md). Add a `debugger;` statement to the body of the test, then run:
+To use a debugger and step through tests using Chrome Developer Tools, add a `debugger;` statement to the body of the test, then run:
 
 ```bash
-yarn test:debug src/path/to/file.test.ts --break
+node --test --inspect-brk src/path/to/file.test.ts
 ```
 
 ### Releasing

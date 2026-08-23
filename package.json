@@ -45,13 +45,5 @@
     "LICENSE.md",
     "package.json"
   ],
-  "ava": {
-    "extensions": {
-      "ts": "module"
-    },
-    "nodeArguments": [
-      "--experimental-strip-types"
-    ]
-  },
   "packageManager": "yarn@4.17.1"
 }
