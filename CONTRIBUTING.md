@@ -55,7 +55,7 @@ To create a release, first increment the package version.
 yarn version [ patch | minor | major | X.Y.Z ]
 ```
 
-Then publish to npm and push to GitHub:
+Reauthenticate with `yarn npm login`, and then publish to npm and push to GitHub:
 
 ```bash
 # stable release
